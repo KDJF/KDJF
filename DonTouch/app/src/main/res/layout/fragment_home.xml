@@ -9,22 +9,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/vp_home"
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
-        </android.support.v4.view.ViewPager>
-
-        <TextView
-            android:id="@+id/textView"
+        <ImageView
+            android:id="@+id/pic_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hello_blank_fragment" />
-
-        <Button
-            android:id="@+id/button_t"
-            android:layout_width="20dp"
-            android:layout_height="20dp" />
+            android:adjustViewBounds="true"
+            android:src="@mipmap/home_1"/>
 
     </LinearLayout>
 

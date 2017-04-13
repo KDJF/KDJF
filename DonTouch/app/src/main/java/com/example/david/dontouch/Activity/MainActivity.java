@@ -31,9 +31,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
     ViewPager viewPager;
-    private List<Fragment> fragmentList;
     HomeFragment homeFragment;
     JournalFragment journalFragment;
     AssessFragment assessFragment;
@@ -76,19 +74,15 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    //mTextMessage.setText(R.string.title_home);
                     viewPager.setCurrentItem(0);
                     return true;
                 case R.id.navigation_journal:
-                    //mTextMessage.setText(R.string.title_journal);
                     viewPager.setCurrentItem(1);
                     return true;
                 case R.id.navigation_assessment:
-                    //mTextMessage.setText(R.string.title_assessment);
                     viewPager.setCurrentItem(2);
                     return true;
                 case R.id.navigation_notifications:
-                    //mTextMessage.setText(R.string.title_notifications);
                     viewPager.setCurrentItem(3);
                     return true;
             }
@@ -102,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-        //mTextMessage = (TextView) findViewById(R.id.textView);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         viewPager.addOnPageChangeListener(mOnViewPageChangeListener);
